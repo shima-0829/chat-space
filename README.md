@@ -6,6 +6,10 @@
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
+### Association
+-belongs_to :user
+-belongs_to :group
+
 
 ## groups_usersテーブル
 
@@ -23,7 +27,24 @@
 
 |Column|Type|Options|
 |------|----|-------|
-||||
+|group_name|string|null: false|
+|group_member|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+
+### Association
+-has_many :messages
+-has_many :users, through: :groups_users
 
 
-user
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false|
+|email|text|null: false|
+|password|text|null: false|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+-has_many :messages
+-has_many :groups, through: :groups_users
