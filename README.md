@@ -28,7 +28,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|group_member|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -40,7 +39,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false|
+|name|string|null: false|
 |email|text|null: false|
 |password|text|null: false|
 |group_id|integer|null: false, foreign_key: true|
