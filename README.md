@@ -42,7 +42,6 @@
 |name|string|null: false|
 |email|text|null: false|
 |password|text|null: false|
-|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :messages
