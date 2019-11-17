@@ -1,0 +1,28 @@
+.contents__main
+  .contents__main__header
+    .main__header__box
+      %h2.main__header__box__group
+        name
+      %ul.main__header__box__member
+        Member:
+        %li.main__header__box__member__name
+          名前
+    .main__header__btn
+      Edit
+  .contents__main__messages
+    .main__messages__box
+      .main__messages__member
+        %p.main__messages__name
+          名前
+        %p.main__messages__date
+          2019/11/14(Thu) 19:39:49
+      %p.main__messages__text
+        頑張る！
+  .contents__main__footer
+    %form.new__message{id:"new_message", enctype: "multipart/formdata", action: "/groups/5725/messages", acceptcharset: "UTF-8", method: "post"}
+      .input__box
+        %input.input__box__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
+        %label.input__box__image{for: "message_image"}
+          = fa_icon 'image'
+          %input.input__box__image__file{type: "file"}
+      %input.submit__btn{type: "submit", value: "Send"}
