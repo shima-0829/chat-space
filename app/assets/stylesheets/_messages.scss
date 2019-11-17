@@ -57,7 +57,6 @@
   .contents__main{
     width: calc(100vw - 300px);
     float: left;
-    box-sizing: border-box;
     &__header{
       height: 100px;
       padding: 0 40px;
@@ -126,20 +125,20 @@
         .input__box{
           position: relative;
           width: 100%;
-          .input__box__text{
+          &__text{
             height: 50px;
             width: 100%;
             padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
           }
-          .input__box__image{
+          &__image{
             font-size: 1.3rem;
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
-            .input__box__image__file{
+            &__file{
               display: none;
             }
           }
